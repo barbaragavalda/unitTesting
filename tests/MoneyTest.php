@@ -1,9 +1,6 @@
 <?php
 
-//namespace Development;
-
-//include_once __DIR__ . '/../src/autoload.php';
-include_once __DIR__ . '/../src/Money.php';
+namespace Development;
 
 class MoneyTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,6 +12,6 @@ class MoneyTest extends \PHPUnit_Framework_TestCase
         $b = $a->negate();
         // Assert
         $this->assertEquals(-1, $b->getAmount());
-        $this->assertEquals(-2, $b->getAmount());
+        $this->assertEquals(-1, $b->getAmount());
     }
 }

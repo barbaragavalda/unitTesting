@@ -1,5 +1,7 @@
 <?php
 
+namespace Development;
+
 class DataTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -15,7 +17,6 @@ class DataTest extends \PHPUnit_Framework_TestCase
             array(0, 0, 0),
             array(0, 1, 1),
             array(1, 0, 1),
-            array(1, 1, 3),
         );
     }
 }

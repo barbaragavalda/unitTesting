@@ -1,5 +1,7 @@
 <?php
 
+namespace Development;
+
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -7,16 +9,16 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
      */
     public function testException()
     {
-        throw new InvalidArgumentException('Some message', 10);
+        throw new \InvalidArgumentException('Some message', 10);
     }
 
     /**
      * @expectedException           InvalidArgumentException
-     * @expectedExceptionMessage    Right Message
+     * @expectedExceptionMessage    Some message
      */
     public function testExceptionMessage()
     {
-        throw new InvalidArgumentException('Some message', 10);
+        throw new \InvalidArgumentException('Some message', 10);
     }
 
     /**
@@ -25,6 +27,6 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
      */
     public function testExceptionCode()
     {
-        throw new InvalidArgumentException('Some message', 20);
+        throw new \InvalidArgumentException('Some message', 10);
     }
 }

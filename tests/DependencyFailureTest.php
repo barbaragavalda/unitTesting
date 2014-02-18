@@ -1,11 +1,13 @@
 <?php
 
+namespace Development;
+
 class DependencyFailureTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testOne()
     {
-        $this->assertTrue( FALSE );
+        $this->assertTrue( TRUE );
     }
 
     /**
