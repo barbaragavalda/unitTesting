@@ -15,6 +15,6 @@ class DatabaseTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testDatabaseNotWorking()
 	{
-		new \PDO( 'mysql:host=127.0.0.1; dbname=mpwar', 'root', '' );
+		new \PDO( 'mysql:host=127.0.0.1; dbname=mpwarcd', 'root', '' );
 	}
 }
