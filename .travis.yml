@@ -11,11 +11,4 @@ env:
 
 before_script:
   - mysql -e "create database IF NOT EXISTS mpwar;" -u root
-  - mysql -e "CREATE TABLE `users` (
-                `id_user` int(11) NOT NULL AUTO_INCREMENT,
-                `user_name` varchar(255) COLLATE utf8_danish_ci NOT NULL,
-                `email` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
-                `password` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
-                `activation_key` int(11) unsigned DEFAULT NULL,
-                PRIMARY KEY (`id_user`)
-              )"
+  - mysql -e "CREATE TABLE `users` (`id_user` int(11) NOT NULL AUTO_INCREMENT,`user_name` varchar(255) COLLATE utf8_danish_ci NOT NULL,`email` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,`password` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,`activation_key` int(11) unsigned DEFAULT NULL,PRIMARY KEY (`id_user`))"
