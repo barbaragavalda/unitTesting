@@ -11,13 +11,13 @@ class UserModelTest extends \PHPUnit_Framework_TestCase
         $db = new \PDO( 'mysql:host=127.0.0.1; dbname=mpwar', 'root', '' );
         $sql = '
             CREATE TABLE IF NOT EXISTS `users` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(255) COLLATE utf8_danish_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
-  `activation_key` int(11) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id_user`)
-)';
+              `id_user` int(11) NOT NULL AUTO_INCREMENT,
+              `user_name` varchar(255) COLLATE utf8_danish_ci NOT NULL,
+              `email` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
+              `password` varchar(255) COLLATE utf8_danish_ci DEFAULT NULL,
+              `activation_key` int(11) unsigned DEFAULT NULL,
+              PRIMARY KEY (`id_user`)
+            )';
         $stmt = $db->prepare($sql);
         $stmt->execute();
     }

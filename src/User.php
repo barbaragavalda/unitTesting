@@ -115,7 +115,7 @@ class User
 
 				break;
 			default:
-				$this->errors['Invalid user origin'];
+				$this->errors[] = 'Invalid user origin';
 				throw new \UnexpectedValueException( 'Invalid user origin', 20 );
 		}
 
