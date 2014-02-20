@@ -26,13 +26,21 @@ class ServiceProvider
 		return self::$instance;
 	}
 
-	/**
-	 * @param $object_name
-	 */
-	public function setService( $object_name )
-	{
-		$this->services[ $object_name ] = new $object_name;
-	}
+    /**
+     * @param $object_name
+     * @param null $object
+     */
+    public function setService( $object_name, $object = null )
+    {
+        if ( $object === null )
+        {
+            $this->services[ $object_name ] = new $object_name;
+        }
+        else
+        {
+            $this->services[ $object_name ] = $object;
+        }
+    }
 
 	/**
 	 * @param $object_name

@@ -15,7 +15,7 @@ class UserModel
 	{
 		try
 		{
-			$this->data_base = new \PDO( "mysql:host=127.0.0.1;dbname=mysql", 'root', 'root' );
+			$this->data_base = new \PDO( "mysql:host=127.0.0.1;dbname=mpwar", 'root', '' );
 			$this->data_base->setAttribute( \PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC );
 		} catch ( \PDOException $e )
 		{
@@ -39,7 +39,9 @@ FROM
 WHERE
 	user_name = '$user_name'
 SQL;
-		$result = $this->data_base->prepare( $sql )->execute( array() )->fetchAll();
+        $stmt = $this->data_base->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
 		return !empty( $result );
 	}
